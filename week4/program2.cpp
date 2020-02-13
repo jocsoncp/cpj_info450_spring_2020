@@ -24,7 +24,7 @@ int main()
     }
     for (int i = 0; i < 30; i++)
     {
-        cout << "students[" << i << "] = " << students[i];
+        cout << "students[" << i << "] = " << students[i] << "\n";
     }
 
     return 0;
