@@ -10,10 +10,10 @@ int main()
     string user_input; 
     string re;
     do{
-        cout << "Please enter a string.";
+        cout << "Please enter a string." << endl;
         getline(cin, user_input);
-        string re = reverse(&user_input);
-        cout << re;
+        re = reverse(&user_input);
+        cout << re << endl;
     }
     while (!user_input.empty());
     return 0;
@@ -26,7 +26,7 @@ string reverse(string *a)
     int len = a->length();
     for (int go = 0; go < len; go++)
     {   
-        
+
         char appe = a->at(stop);
         b += appe;
         stop--;
