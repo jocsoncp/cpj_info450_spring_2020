@@ -3,25 +3,32 @@
 #include <vector>
 
 using namespace std;
+string reverse (string *a);
 
 int main()
 {
-    string a1; 
-    cout << "Please enter a string.";
-    getline(cin, a1);
-    string a1 = reverse(a1);
-    cout << a1;
+    string user_input; 
+    string re;
+    do{
+        cout << "Please enter a string.";
+        getline(cin, user_input);
+        string re = reverse(&user_input);
+        cout << re;
+    }
+    while (!user_input.empty());
     return 0;
 }
 
-string reverse(string a)
+string reverse(string *a)
 {
-    string b = "";
-    int stop = a.length();
-    for (int go = 0; go < a.length(); go++)
-    {
+    string b;
+    int stop = a->length() - 1;
+    int len = a->length();
+    for (int go = 0; go < len; go++)
+    {   
         
-        string b = b + a[stop];
+        char appe = a->at(stop);
+        b += appe;
         stop--;
     }
 
