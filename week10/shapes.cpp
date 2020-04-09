@@ -7,22 +7,29 @@ class shape{
     int get_area(){             return -1; }
 };
 class circle : public shape{
+  private:
+    int ci;
   public:
-    circle(int radius){ }
-    int get_perimeter_length(){ return -1; }
-    int get_area(){             return -1; }
+    circle(int radius){ci = radius; }
+    int get_perimeter_length(){ return 2*PI*ci; }
+    int get_area(){             return PI*(ci*ci); }
 };
 class rectangle : public shape{
+  private:
+    int hei;
+    int wid;
   public:
-    rectangle(int height, int width){ }
-    int get_perimeter_length(){ return -2; }
-    int get_area(){             return -2; }
+    rectangle(int height, int width){hei = height; wid = width; }
+    int get_perimeter_length(){ return 2*(hei+wid); }
+    int get_area(){             return hei*wid; }
 };
 class square : public shape{
+  private:
+    int sq;  
   public:
-    square(int side) { }
-    int get_perimeter_length(){ return -3; }
-    int get_area(){             return -3; }
+    square(int side) {sq=side; }
+    int get_perimeter_length(){ return sq*4; }
+    int get_area(){             return sq*sq; }
 };
 int main(){
   shape *s1;
