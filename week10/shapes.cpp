@@ -2,9 +2,10 @@
 using namespace std;
 const int PI = 3; // for simplicity, we'll pretend PI is 3
 class shape{
+    
   public:
-    int get_perimeter_length(){ return -1; }
-    int get_area(){             return -1; }
+    virtual int get_perimeter_length(){ return -1; }
+    virtual int get_area(){             return -1; }
 };
 class circle : public shape{
   private:
@@ -20,7 +21,7 @@ class rectangle : public shape{
     int wid;
   public:
     rectangle(int height, int width){hei = height; wid = width; }
-    int get_perimeter_length(){ return 2*(hei+wid); }
+    int get_perimeter_length(){ return ((2*hei)+(2*wid)); }
     int get_area(){             return hei*wid; }
 };
 class square : public shape{
