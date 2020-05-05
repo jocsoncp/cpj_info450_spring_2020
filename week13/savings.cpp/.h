@@ -21,4 +21,6 @@ void Savings::display()
 {
     cout << "Number of Withdrawls: " << numwithdraws << endl;
     cout << "Number of Deposits: " << numdeposits << endl;
+    cout << endl;
+    cout << "Balance: $" << GetBalance() << endl;
 }
