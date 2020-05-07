@@ -1,4 +1,7 @@
 #include <iostream>
+
+#include "account.cpp/.h"
+
 using namespace std;
 
 class CreditCard : public Account
